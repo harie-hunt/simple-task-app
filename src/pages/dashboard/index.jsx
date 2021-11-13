@@ -6,7 +6,7 @@ const Dashboard = () => {
   const { isAuth } = useApiContext();
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-200">
       {isAuth ? (
         <TaskProvider>
           <Tasks />
@@ -14,7 +14,7 @@ const Dashboard = () => {
       ) : (
         <Auths />
       )}
-    </>
+    </div>
   );
 };
 

@@ -162,9 +162,9 @@ const Auth = () => {
           )}
 
           <button
-            className={`w-full p-2 bg-${
-              isProcess ? "gray" : "blue"
-            }-400 rounded-full text-white font-semibold`}
+            className={`w-full p-2 ${
+              isProcess ? "bg-gray-400" : "bg-blue-400"
+            } rounded-full text-white font-semibold`}
           >
             {isProcess ? "process" : isLogin ? "LOGIN" : "REGISTER"}
           </button>
