@@ -1,12 +1,17 @@
-import React from "react";
-import ApiProvider from "./contexts/ApiContext";
-import Dashboard from "./pages/dashboard";
+import {} from "react";
+import { Routes, Route } from "react-router-dom";
+import { Home, Login, Register, Tasks } from "./routes";
 
 function App() {
   return (
-    <ApiProvider>
-      <Dashboard />
-    </ApiProvider>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route path="tasks" element={<Tasks />} />
+
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+    </Routes>
   );
 }
 
