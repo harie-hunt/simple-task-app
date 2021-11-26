@@ -22,8 +22,10 @@ export default function Login() {
   //
   const onSubmit = (values, actions) => {
     setIsSubmitting(true);
+
     console.log(values);
     console.log(actions);
+
     ApiAuth.login(values).then((res) => {
       console.log(res);
       actions.setFieldError(res.param, res.msg);
@@ -36,7 +38,7 @@ export default function Login() {
       <section className="container bg-blue-100 hidden md:block"></section>
 
       <section className="w-full md:w-2/6">
-        <div className="w-4/6 mx-auto mt-20 space-y-8">
+        <div className="w-4/6 p-4 shadow-lg rounded-lg mx-auto mt-20 space-y-8 bg-white">
           <header className="text-4xl text-center">Login</header>
 
           <Formik
@@ -51,6 +53,7 @@ export default function Login() {
                 label="Login"
                 type="submit"
                 isSubmitting={isSubmitting}
+                disabled
               />
             </Form>
           </Formik>

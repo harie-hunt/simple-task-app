@@ -1,4 +1,4 @@
-import {} from "react";
+import { useEffect } from "react";
 import {} from "react-router-dom";
 import { useField } from "formik";
 
@@ -8,7 +8,7 @@ export default function InputText({ label, ...props }) {
   return (
     <div
       className={`relative p-4 pb-0 border-b-2 ${
-        meta.touched && meta.error && "border-red-500"
+        meta.touched && meta.error ? "border-red-500" : "border-gray-300"
       } focus-within:border-blue-500`}
     >
       <input
